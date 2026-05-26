@@ -1,17 +1,26 @@
 {
-  "name": "web",
+  "name": "proof-os",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node --import tsx --test src/lib/arkiv/reputation.test.ts",
+    "setup": "node scripts/setup-env.mjs",
+    "env:fix": "node scripts/merge-env.mjs",
+    "env:check": "node scripts/check-env.mjs"
   },
   "dependencies": {
+    "@arkiv-network/sdk": "^0.6.8",
+    "iron-session": "^8.0.4",
     "next": "16.2.6",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "siwe": "^3.0.0",
+    "viem": "^2.51.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -21,6 +30,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",
+    "tsx": "^4.22.3",
     "typescript": "^5"
   }
 }

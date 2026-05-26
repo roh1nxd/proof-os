@@ -23,6 +23,8 @@
 # misc
 .DS_Store
 *.pem
+Thumbs.db
+desktop.ini
 
 # debug
 npm-debug.log*
@@ -30,8 +32,24 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# ── Sensitive / secret files ──
+# Environment variables (secrets, API keys, private keys)
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Private keys & wallets
+*.key
+*.p12
+*.pfx
+*.keystore
+
+# Uploaded user content
+/public/uploads/*
+!/public/uploads/avatars/.gitkeep
 
 # vercel
 .vercel
@@ -39,3 +57,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE / editor
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
