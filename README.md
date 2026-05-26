@@ -1,4 +1,5 @@
 # ProofOS
+https://github.com/roh1nxd/proof-os
 
 Proof-of-work identity infrastructure for builders. All reputation proofs are stored as **Arkiv entities** on the [Braga DB-chain](https://docs.arkiv.network/) (network id `60138453102`).
 
